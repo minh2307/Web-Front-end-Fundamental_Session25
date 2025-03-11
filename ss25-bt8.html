@@ -9,7 +9,34 @@
 
 <body>
     <script>
+        function pass(str) {
+            let countUpper = 0;
+            let countLower = 0;
+            let countNum = 0;
 
+            if (str.length < 8) {
+                return false;
+            }
+
+            for (let value of str) {
+                if (value === value.toUpperCase() && isNaN(value)) {
+                    countUpper++;
+                }
+                if (value === value.toLowerCase() && isNaN(value)) {
+                    countLower++;
+                }
+                if (!isNaN(value)) {
+                    countNum++;
+                }
+            }
+
+            return countUpper > 0 && countLower > 0 && countNum > 0;
+        }
+
+        console.log(pass("Abc12345"));
+        console.log(pass("abcdefg"));
+        console.log(pass("ABCDEFG1"));
+        console.log(pass("12345678")); 
     </script>
 </body>
 
