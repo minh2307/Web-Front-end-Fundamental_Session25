@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function even(a) {
+            if (typeof a === "string") {
+                return 'dữ liệu không hợp lệ';
+            } else {
+                let b = [];
+                for (let value of a) {
+                    if (value % 2 === 0) {
+                        b.push(value);
+                    }
+                }
+                return b.length === 0 ? 'Mảng không chứa số chẵn' : b;
+            }
+        }
+        let a = [11, 65];
+        console.log(even(a));
+    </script>
+</body>
+
+</html>

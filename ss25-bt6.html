@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function isPalindrome(str) {
+            let reversedStr = str.split('').reverse().join('');
+            return str === reversedStr ? "Là một chuỗi đối xứng" : "Không phải là một chuỗi đối xứng";
+        }
+        let str = prompt("Mời bạn nhập chuỗi: ");
+        console.log(isPalindrome("str"));
+        // console.log(isPalindrome("aloola"));
+        // console.log(isPalindrome("12345"));  
+    </script>
+</body>
+
+</html>

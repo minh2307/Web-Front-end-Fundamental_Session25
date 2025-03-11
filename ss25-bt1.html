@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function minArray(a) {
+            for (let vlaue of a) {
+                if (isNaN(vlaue)) {
+                    return "giá trị không hợp lệ";
+                }
+            }
+            if (a.length === 0) {
+                return "Mảng không chứa phần tử hợp lệ";
+
+            } else {
+                let min = a[0];
+                for (let value of a) {
+                    if (value < min) {
+                        min = value;
+                    }
+                }
+                return `phần tử nhỏ nhất trong mảng là ${min}`;
+            }
+        }
+        let a = [];
+        console.log(minArray(a));
+
+    </script>
+</body>
+
+</html>

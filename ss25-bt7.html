@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function uppercase(str) {
+            let a = str.split(' ');
+            let newA = [];
+            for (let i = 0; i < a.length; i++) {
+                newA.push(a[i].charAt(0).toUpperCase() + a[i].slice(1));
+            }
+            return newA.join(' ');
+        }
+        let text = 'hello WORLD'
+        console.log(uppercase(text.toLowerCase()));
+    </script>
+</body>
+
+</html>
